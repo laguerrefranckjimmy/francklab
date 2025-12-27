@@ -1,15 +1,17 @@
-import "./Projects.css";
+import "./css/Projects.css";
 
 const projects = [
   {
-    title: "AWS Serverless API",
-    description: "Lambda, API Gateway, DynamoDB, IAM",
-    link: "#",
+    title: "Rain Predictor",
+    description: "Machine Learning, AWS EC2, Github Actions",
+    Github_link: "https://github.com/laguerrefranckjimmy/rain-predictor",
+    demo: "#"
   },
   {
-    title: "Flask Z/OS API Wrapper",
-    description: "Secure API for managing JCL jobs",
-    link: "#",
+    title: "E-commerce Simulation",
+    description: "Kafka, Ci/Cd, AWS, Spring Boot, Vertx",
+    Github_link: "https://github.com/laguerrefranckjimmy/on-premise",
+    demo: "#"
   },
 ];
 
@@ -22,7 +24,8 @@ export default function Projects() {
           <div className="project-card" key={i}>
             <h3>{p.title}</h3>
             <p>{p.description}</p>
-            <a href={p.link}>View Project →</a>
+            <a href={p.Github_link}>View Project in Github →</a>
+            <a href={p.demo}>View Project Demo</a>
           </div>
         ))}
       </div>

@@ -1,4 +1,4 @@
-import "./Skills.css";
+import "./css/Skills.css";
 
 export default function Skills() {
   return (
@@ -7,7 +7,7 @@ export default function Skills() {
       <ul className="skills-list">
         <li>Python, Java, JavaScript</li>
         <li>React, Flask, Spring Boot</li>
-        <li>AWS, Docker, CI/CD</li>
+        <li>AWS, Docker, CI/CD, Kafka</li>
         <li>Machine Learning</li>
       </ul>
     </section>

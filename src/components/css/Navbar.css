@@ -1,0 +1,35 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%; /* make full width */
+  background: #020617;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+  z-index: 100;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Right-side nav links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: auto; /* pushes links to the far right */
+}
+
+.nav-links a {
+  color: #cbd5f5;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
