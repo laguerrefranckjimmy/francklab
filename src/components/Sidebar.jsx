@@ -1,15 +1,25 @@
 import "./css/Sidebar.css";
 
-export default function Sidebar() {
-  return (
-    <aside className="sidebar">
-      <h3 className="sidebar-title">Tools</h3>
+export default function Sidebar({ setActiveTool }) {
+  const tools = [
+    { key: "breakingnews", label: "Currency Converter" },
+    { key: "rainpredictor", label: "Rain Predictor" },
+    { key: "newsfeed", label: "Breaking News" },
+    // Add more tools here as needed
+  ];
 
-      <nav className="sidebar-links">
-        <a href="#tool-1">Breaking News</a>
-        <a href="#tool-2">Currency Converter</a>
-        <a href="#tool-3">Rain Predictor</a>
-      </nav>
-    </aside>
+  return (
+    <div className="sidebar">
+      <h4 className="sidebar-title">Tools</h4>
+      {tools.map((tool) => (
+        <button
+          key={tool.key}
+          className="sidebar-button"
+          onClick={() => setActiveTool(tool.key)}
+        >
+          {tool.label}
+        </button>
+      ))}
+    </div>
   );
 }
