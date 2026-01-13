@@ -33,3 +33,9 @@
 .nav-links a:hover {
   color: #38bdf8;
 }
+
+/* Logo image */
+.logo {
+  height: 80px;       /* adjust as needed */
+  width: auto;
+  cursor: pointer;
