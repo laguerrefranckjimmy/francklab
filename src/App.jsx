@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import "./components/css/App.css";
 
 import CurrencyConverter from "./components/CurrencyConverter";
 import BreakingNews from "./components/BreakingNews";
