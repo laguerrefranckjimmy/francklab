@@ -1,8 +1,12 @@
+/* ========================================
+   Navbar.css - Responsive Navigation
+   ======================================== */
+
 .navbar {
   position: sticky;
   top: 0;
   height: 80px;
-  width: 100%; /* make full width */
+  width: 100%;
   background: #020617;
   padding: 0 40px;
   display: flex;
@@ -11,17 +15,15 @@
   z-index: 100;
 }
 
-/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
 }
 
-/* Right-side nav links */
 .nav-links {
   display: flex;
   gap: 30px;
-  margin-left: auto; /* pushes links to the far right */
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -34,9 +36,49 @@
   color: #38bdf8;
 }
 
-/* Logo image */
 .logo {
-  height: 80px;       /* adjust as needed */
+  height: 80px;
   width: auto;
   cursor: pointer;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+    height: 60px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
 }

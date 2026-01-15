@@ -1,3 +1,7 @@
+/* ========================================
+   Sidebar.css - Responsive Sidebar
+   ======================================== */
+
 .sidebar {
   position: fixed;
   top: 80px;
@@ -7,6 +11,7 @@
   background: #020617;
   padding: 20px;
   border-right: 1px solid #1e293b;
+  transition: transform 0.3s ease;
 }
 
 .sidebar-title {
@@ -42,4 +47,54 @@
   background: #38bdf8;
   color: #020617;
   font-weight: 600;
+}
+
+/* Tablet - Convert to top bar */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #1e293b;
+    padding: 15px 20px;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .sidebar-title {
+    margin-right: 15px;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .sidebar-button {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile - Stack vertically with toggle */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .sidebar-title {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .sidebar-button {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
 }

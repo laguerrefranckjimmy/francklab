@@ -1,8 +1,13 @@
+/* ========================================
+   Projects.css - Responsive Projects Grid
+   ======================================== */
+
 .projects-grid {
   margin-top: 40px;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 0 20px;
 }
 
 .project-card {
@@ -21,4 +26,41 @@
 .project-card p {
   margin: 15px 0;
   color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
 }

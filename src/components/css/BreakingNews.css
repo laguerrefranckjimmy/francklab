@@ -1,12 +1,17 @@
+/* ========================================
+   BreakingNews.css - Responsive
+   ======================================== */
+
 .news-page {
   max-width: 900px;
   margin: auto;
-  padding-top: 40px;
+  padding: 40px 20px;
 }
 
 .news-page h2 {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 2rem;
 }
 
 .news-filters {
@@ -14,6 +19,7 @@
   gap: 15px;
   justify-content: center;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .news-filters select {
@@ -22,11 +28,14 @@
   border: 1px solid #1e293b;
   color: #e5e7eb;
   border-radius: 6px;
+  font-size: 16px;
+  min-height: 44px;
 }
 
 .loading {
   text-align: center;
   color: #94a3b8;
+  padding: 40px 20px;
 }
 
 .news-list {
@@ -46,6 +55,7 @@
   cursor: pointer;
   color: #38bdf8;
   font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .news-title:hover {
@@ -59,6 +69,7 @@
 
 .news-details img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -79,19 +90,94 @@
   margin-top: 12px;
   color: #38bdf8;
   font-weight: 500;
+  min-height: 44px;
+  padding: 10px 0;
 }
 
 .back-button {
-  margin-bottom: 32px;   /* 👈 creates space below the button */
-  padding: 8px 14px;
+  margin-bottom: 32px;
+  padding: 10px 16px;
   font-size: 14px;
   border-radius: 6px;
   border: none;
   background: #f1f1f1;
   cursor: pointer;
   display: inline-block;
+  min-height: 44px;
+  color: #020617;
 }
 
 .back-button:hover {
   background: #e0e0e0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .news-page {
+    padding: 30px 20px;
+  }
+
+  .news-page h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .news-page {
+    padding: 20px 15px;
+  }
+
+  .news-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .news-filters {
+    gap: 10px;
+  }
+
+  .news-filters select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .news-card {
+    padding: 15px;
+  }
+
+  .news-title {
+    font-size: 1rem;
+  }
+
+  .news-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-page h2 {
+    font-size: 1.3rem;
+  }
+
+  .news-filters {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .news-filters select {
+    width: 100%;
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+  }
+
+  .news-meta {
+    font-size: 0.8rem;
+  }
+
+  .news-content {
+    font-size: 0.9rem;
+  }
 }

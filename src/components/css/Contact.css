@@ -1,7 +1,30 @@
+/* ========================================
+   Contact.css - Responsive Contact
+   ======================================== */
+
 .contact {
   text-align: center;
+  padding: 20px;
 }
 
 .contact p {
   margin-top: 15px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .contact p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .contact p {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
 }

@@ -37,7 +37,7 @@ export default function BreakingNewsPage({ onBack }) {
     setLoading(true);
     setExpandedIndex(null);
 
-    const url = ` https://uxw7bwx7yk.execute-api.us-east-1.amazonaws.com/prod/news-api/news?country=${country}&category=${category}`;
+    const url = `https://uxw7bwx7yk.execute-api.us-east-1.amazonaws.com/prod/news-api/news?country=${country}&category=${category}`;
 
     const res = await fetch(url);
     const data = await res.json();

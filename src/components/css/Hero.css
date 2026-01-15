@@ -1,20 +1,25 @@
+/* ========================================
+   Hero.css - Responsive Hero Section
+   ======================================== */
+
 .hero {
   height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  transform: translateY(-40px); /* keeps content slightly higher */
+  padding: 20px;
+  transform: translateY(-40px);
 }
 
-/* Name */
 .hero-name {
   font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
-/* Title */
 .hero-title {
   font-size: 1.4rem;
   font-weight: 500;
@@ -22,19 +27,95 @@
   margin-bottom: 20px;
 }
 
-/* Description */
 .hero-description {
   max-width: 750px;
   font-size: 1.05rem;
   color: #cbd5f5;
   line-height: 1.7;
+  padding: 0 20px;
 }
 
-/* Buttons */
 .hero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 40px 20px;
+    transform: translateY(0);
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 15px;
+    min-height: 60vh;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 25px;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
 }

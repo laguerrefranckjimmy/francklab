@@ -1,6 +1,11 @@
+/* ========================================
+   Skills.css - Responsive Skills List
+   ======================================== */
+
 .skills-list {
   margin-top: 30px;
   list-style: none;
+  padding: 0 20px;
 }
 
 .skills-list li {
@@ -9,4 +14,36 @@
   border-radius: 6px;
   margin-bottom: 10px;
   border: 1px solid #1e293b;
+  transition: background 0.2s ease;
+}
+
+.skills-list li:hover {
+  background: #0f172a;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .skills-list li {
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    margin-top: 20px;
+  }
+
+  .skills-list li {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
 }

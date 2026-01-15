@@ -7,7 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "deploy": "npm run build && npm run deploy:cloudfront",
+
+    "deploy:s3": "aws s3 sync dist/ s3://francklab-homepage-bucket --delete && aws s3 cp dist/index.html s3://francklab-homepage-bucket/index.html --cache-control 'public, max-age=0, must-revalidate' && aws s3 sync dist/assets/ s3://francklab-homepage-bucket/assets/ --cache-control 'public, max-age=31536000, immutable'",
+
+    "deploy:cloudfront": "npm run deploy:s3 && aws cloudfront create-invalidation --distribution-id E13JJEZHZ55AZ --paths '/index.html'"
   },
   "dependencies": {
     "react": "^19.2.0",

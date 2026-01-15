@@ -1,5 +1,26 @@
+/* ========================================
+   About.css - Responsive About
+   ======================================== */
+
 .about p {
   margin-top: 20px;
   font-size: 1.05rem;
   color: #cbd5f5;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about p {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
 }
